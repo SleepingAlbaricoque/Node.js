@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+  </head>
+  <body>
+    <h3>Ch2.Express 실습</h3>
+    <h4>링크</h4>
+    <a href="/sub/hello">Hello</a>
+    <a href="/sub/welcome">Welcome</a>
+    <a href="/sub/greeting">Greeting</a>
+
+    <h4>출력</h4>
+    <p>
+      tit1: <%= tit1 %><br />
+      tit2: <%= tit2 %>
+    </p>
+    <p>
+      uid: <%= user.uid %><br />
+      name: <%= user.name %><br />
+      hp: <%= user.hp %><br />
+      age: <%= user.age %>
+    </p>
+
+    <h4>조건문</h4>
+    <h5>if</h5>
+    <% if(result1){ %>
+    <p>result1은 True입니다</p>
+    <% } %>
+    <hr />
+
+    <h5>else-if</h5>
+    <% if(result2){ %>
+    <p>result2는 True입니다</p>
+    <% }else{ %>
+    <p>result2는 False입니다</p>
+    <% } %>
+
+    <h5>if-else if-if</h5>
+    <% if(score> 90){ %>
+    <p>A</p>
+    <% }else if(score> 80){%>
+    <p>B</p>
+    <% }else if(score> 70){%>
+    <p>C</p>
+    <% }else if(score> 60){%>
+    <p>D</p>
+    <% }else{%>
+    <p>F</p>
+    <% } %>
+
+    <h4>반복문</h4>
+    <table border="1">
+      <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>휴대폰</th>
+        <th>나이</th>
+      </tr>
+      <% for(let i =0; i < users.length; i++){%>
+      <!-- for(const user of users)해도 됨-->
+      <tr>
+        <td><%= users[i].uid %></td>
+        <td><%= users[i].name %></td>
+        <td><%= users[i].hp %></td>
+        <td><%= users[i].age %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
