@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>post2</title>
+  </head>
+  <body>
+    <h3>post2 결과</h3>
+    <form action="/sub1/post2Result" method="post">
+      <table border="1">
+        <tr>
+          <td>아이디</td>
+          <td><%= uid %></td>
+        </tr>
+        <tr>
+          <td>이름</td>
+          <td><%= name %></td>
+        </tr>
+        <tr>
+          <td>휴대폰</td>
+          <td><%= hp %></td>
+        </tr>
+        <tr>
+          <td>나이</td>
+          <td><%= age %></td>
+        </tr>
+      </table>
+      <a href="/">메인으로</a>
+    </form>
+  </body>
+</html>
