@@ -11,3 +11,6 @@
       - express.static
       - GET / POST
       - cookie, session
+
+## Ch4
+    - mongoDB에 연결 및 데이터 insert 실습하기
