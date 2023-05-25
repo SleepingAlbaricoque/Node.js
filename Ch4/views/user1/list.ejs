@@ -15,16 +15,18 @@
         <th>나이</th>
         <th>관리</th>
       </tr>
+      <% for(const user of users){ %>
       <tr>
-        <td>a101</td>
-        <td>홍길동</td>
-        <td>010-1234-1001</td>
-        <td>21</td>
+        <td><%= user.uid %></td>
+        <td><%= user.name %></td>
+        <td><%= user.hp %></td>
+        <td><%= user.age %></td>
         <td>
-          <a href="#">수정</a>
-          <a href="#">삭제</a>
+          <a href="/user1/modify?_id=<%= user._id %>">수정</a>
+          <a href="/user1/delete?_id=<%= user._id %>">삭제</a>
         </td>
       </tr>
+      <% } %>
     </table>
   </body>
 </html>
